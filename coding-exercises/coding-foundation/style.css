@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family:Monospace;
+  font-size: 40px;
+}
+
+div#inputbox{
+  width: 220px;
+  margin: auto;
+}
+
+div#squares div{
+  width: 40px;
+  height:40px;
+  margin: left;
+  margin-left: 50px;
+  margin-top: 20px;
+  border:1px;
+  /* background-image: linear-gradient(to right, red , pink, yellow); */
+  background-color: blue;
+  display: flex;
+  float: left;
+}
+div#squares{
+  color: white;
+  text-align: center;
+  font-family:Monospace;
+  font-size: 20px;
+  margin-top: 20px;
+}
