@@ -6,7 +6,7 @@ Hi! I am [your name] and in this repository I will develop my work for the [Crit
 
 Among other things, I will link to Coding Exercises and Projects:
 
-- [coding exercise (placeholder)](coding-exercises/placeholder)
+- [coding exercise (placeholder)](coding-exercises/coding-foundation/)
 - [cool project (placeholder)](projects/placeholder)
 - ...
 
