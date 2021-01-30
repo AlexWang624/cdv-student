@@ -3,5 +3,5 @@
 In this exercise I encountered
 - problems: I don't know how to remove the error message "Error. Please enter a positive number." after entering a positive number in the input box.
 
-See my work [here](https://leoneckert.github.io/cdv-student/coding-exercises/placeholder/website/). (note this link goes to GitHub Pages, the *public* face of this project)
+See my work [here](https://alexwang624.github.io/cdv-student/coding-exercises/coding-foundation/coding-exercise-1/). (note this link goes to GitHub Pages, the *public* face of this project)
 ̨
