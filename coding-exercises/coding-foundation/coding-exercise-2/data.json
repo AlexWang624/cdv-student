@@ -1,0 +1,242 @@
+let data = [
+    {
+        "timestamp": "2021-01-29T11:48:12.258Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 5,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 4,
+        "whiteBoardMarkers": 3,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 4
+    },
+    {
+        "timestamp": "2021-01-29T11:51:18.814Z",
+        "gasoline": 4,
+        "rubbingAlcohol": 4,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 3,
+        "whiteBoardMarkers": 1,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-29T11:51:46.504Z",
+        "gasoline": 2,
+        "rubbingAlcohol": 4,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 1,
+        "nailPolish": 3,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-29T11:58:03.882Z",
+        "gasoline": 4,
+        "rubbingAlcohol": 4,
+        "oldBooks": 4,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 5
+    },
+    {
+        "timestamp": "2021-01-29T12:00:38.957Z",
+        "gasoline": 2,
+        "rubbingAlcohol": 4,
+        "oldBooks": 3,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-29T12:03:47.917Z",
+        "gasoline": 4,
+        "rubbingAlcohol": 4,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 5,
+        "whiteBoardMarkers": 3,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 5
+    },
+    {
+        "timestamp": "2021-01-29T12:03:49.956Z",
+        "gasoline": 2,
+        "rubbingAlcohol": 4,
+        "oldBooks": 3,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 3
+    },
+    {
+        "timestamp": "2021-01-29T12:17:18.288Z",
+        "gasoline": 4,
+        "rubbingAlcohol": 1,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 5,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 4,
+        "undergroundParkingGarages": 3
+    },
+    {
+        "timestamp": "2021-01-29T12:36:16.269Z",
+        "gasoline": 3,
+        "rubbingAlcohol": 3,
+        "oldBooks": 3,
+        "chlorinatedSwimmingPools": 4,
+        "whiteBoardMarkers": 3,
+        "nailPolish": 3,
+        "undergroundParkingGarages": 3
+    },
+    {
+        "timestamp": "2021-01-29T12:38:37.371Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 3,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 4,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-29T12:45:03.432Z",
+        "gasoline": 4,
+        "rubbingAlcohol": 3,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 5
+    },
+    {
+        "timestamp": "2021-01-29T12:53:14.611Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 5,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 3,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-29T13:35:40.113Z",
+        "gasoline": 2,
+        "rubbingAlcohol": 4,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 5,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 5
+    },
+    {
+        "timestamp": "2021-01-29T13:40:33.426Z",
+        "gasoline": 2,
+        "rubbingAlcohol": 4,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 5,
+        "whiteBoardMarkers": 3,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-29T13:50:21.398Z",
+        "gasoline": 3,
+        "rubbingAlcohol": 3,
+        "oldBooks": 4,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 3
+    },
+    {
+        "timestamp": "2021-01-29T13:56:21.640Z",
+        "gasoline": 5,
+        "rubbingAlcohol": 3,
+        "oldBooks": 1,
+        "chlorinatedSwimmingPools": 1,
+        "whiteBoardMarkers": 4,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 5
+    },
+    {
+        "timestamp": "2021-01-29T14:38:40.923Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 2,
+        "oldBooks": 4,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-29T15:20:05.349Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 2,
+        "oldBooks": 3,
+        "chlorinatedSwimmingPools": 1,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 4,
+        "undergroundParkingGarages": 5
+    },
+    {
+        "timestamp": "2021-01-29T15:23:10.686Z",
+        "gasoline": 3,
+        "rubbingAlcohol": 3,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 4,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 5
+    },
+    {
+        "timestamp": "2021-01-29T16:45:48.851Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 4,
+        "oldBooks": 5,
+        "chlorinatedSwimmingPools": 5,
+        "whiteBoardMarkers": 1,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 3
+    },
+    {
+        "timestamp": "2021-01-29T17:14:26.964Z",
+        "gasoline": 2,
+        "rubbingAlcohol": 2,
+        "oldBooks": 4,
+        "chlorinatedSwimmingPools": 3,
+        "whiteBoardMarkers": 3,
+        "nailPolish": 3,
+        "undergroundParkingGarages": 2
+    },
+    {
+        "timestamp": "2021-01-29T17:48:57.310Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 1,
+        "oldBooks": 4,
+        "chlorinatedSwimmingPools": 2,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 2,
+        "undergroundParkingGarages": 2
+    },
+    {
+        "timestamp": "2021-01-29T23:04:24.951Z",
+        "gasoline": 1,
+        "rubbingAlcohol": 4,
+        "oldBooks": 2,
+        "chlorinatedSwimmingPools": 3,
+        "whiteBoardMarkers": 2,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 1
+    },
+    {
+        "timestamp": "2021-01-31T03:41:30.540Z",
+        "gasoline": 4,
+        "rubbingAlcohol": 3,
+        "oldBooks": 4,
+        "chlorinatedSwimmingPools": 4,
+        "whiteBoardMarkers": 1,
+        "nailPolish": 1,
+        "undergroundParkingGarages": 5
+    }
+]

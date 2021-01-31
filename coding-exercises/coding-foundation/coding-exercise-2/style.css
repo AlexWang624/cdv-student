@@ -1,0 +1,60 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: Monospace;
+  font-size: 40px;
+}
+
+.bar {
+  height: 45px;
+  background-color: black;
+  padding-left: 5px;
+}
+
+.bar p{
+  color: white;
+  font-family: Monospace;
+  font-size: 20px;
+}
+
+/* .number p{
+color: black;
+font-family: Monospace;
+font-size: 15px;
+padding-left: 5px;
+} */
+
+.number p{
+  display: none;
+}
+
+.bar:hover {
+  background-color: blue;
+}
+
+.bar:hover + .number p {
+ display: block;
+ color: blue;
+ font-family: Monospace;
+ font-size: 15px;
+ padding-left: 5px;
+}
+
+a {
+ color: black;
+ font-family: Monospace;
+ font-size: 20px;
+ padding-left: 5px;
+ padding-top: 40px;
+}
+
+a:hover {
+ color: red;
+ font-family: Monospace;
+ font-size: 20px;
+ padding-left: 5px;
+}
