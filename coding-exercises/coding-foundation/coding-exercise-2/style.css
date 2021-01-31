@@ -21,13 +21,6 @@ h1 {
   font-size: 20px;
 }
 
-/* .number p{
-color: black;
-font-family: Monospace;
-font-size: 15px;
-padding-left: 5px;
-} */
-
 .number p{
   display: none;
 }
