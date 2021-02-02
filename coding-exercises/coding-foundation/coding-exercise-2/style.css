@@ -63,9 +63,9 @@ a:hover {
 }
 
 p:empty {
+  background-color: #F9F9F9;
   width: 100px;
   height: 20px;
-  background-color: #F9F9F9;
 }
 
 div#scale{
