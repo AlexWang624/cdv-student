@@ -281,6 +281,7 @@ for (let i = 0; i < transformedData.length; i ++){
   let barWidth = smellObject.average * 160;
   bar.style.width = barWidth + "px";
 
+
 let name = smellObject.name;
 let ptag = document.createElement("p");
 ptag.innerHTML =  name;
