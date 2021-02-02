@@ -1,54 +1,86 @@
 body {
-  background-color: white;
+  background-color: black;
 }
 
 h1 {
-  color: black;
+  color: white;
   text-align: center;
   font-family: Monospace;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .bar {
   height: 50px;
-  background-color: black;
+  background-color: #4203c9;
   padding-left: 5px;
+  margin-left: 500px;
 }
 
 .bar p{
   color: white;
   font-family: Monospace;
-  font-size: 20px;
+  font-size: 23px;
+  margin-left: -390px;
+  font-weight: bold;
 }
 
 .number p{
   display: none;
 }
 
-.bar:hover {
-  background-color: blue;
+.bar:hover{
+  background-color: #ff173e;
+}
+
+.bar:hover p{
+  color: #ff173e;
 }
 
 .bar:hover + .number p {
  display: block;
- color: blue;
+ color: #ff173e;
  font-family: Monospace;
- font-size: 15px;
+ font-size: 19px;
  padding-left: 5px;
  font-weight: 400;
+ margin-left: 500px;
 }
 
 a {
- color: black;
+ color: white;
  font-family: Monospace;
- font-size: 20px;
+ font-size: 22px;
  padding-left: 5px;
  padding-top: 40px;
+ margin-left: 110px;
 }
 
 a:hover {
- color: red;
+ color: #ff173e;
  font-family: Monospace;
- font-size: 20px;
+ font-size: 22px;
  padding-left: 5px;
+}
+
+p:empty {
+  width: 100px;
+  height: 20px;
+  background: black;
+}
+
+div#scale{
+  width: 800px;
+  height: 2px;
+  background-color: #ff173e;
+  margin-left: 500px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+p.scalenumber{
+  color: #ff173e;
+  font-size: 22px;
+  font-family: Monospace;
+  padding-top: 6px;
+  word-spacing: 760px;
 }

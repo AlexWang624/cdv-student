@@ -278,7 +278,7 @@ for (let i = 0; i < transformedData.length; i ++){
 
   let bar = document.createElement("div");
   bar.className = "bar";
-  let barWidth = smellObject.average * 100;
+  let barWidth = smellObject.average * 160;
   bar.style.width = barWidth + "px";
 
 let name = smellObject.name;
