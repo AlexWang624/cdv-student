@@ -1,11 +1,11 @@
-## Reading 1 ##
-### **Material** ###
+## Reading 1
+### **Material**
 <br/>
 
 1. [<em>Critical Questions for Big Data</em>](https://drive.google.com/file/d/1UHIPYi6UyY1hSlXQwcxkZ5EQdipexVIx/view) by Danah Boyd, Kate Crawford (2012)<br/>
 2. ["Data Humanism, The Revolution will be Visualized"](http://giorgialupi.com/data-humanism-my-manifesto-for-a-new-data-wold/) by Giorgia Lupi (2017)<br/>
 
-### **Response** ###
+### **Response** 
 <br/>
 
 A year ago I read about the famous statement by communication theorist Marshall McLuhan, “the medium is the message”, in his book Understanding Media: The Extensions of Man. Originally, this statement refers to how the media, such as TV, determine people in how to perceive and process the messages carried by them. However,  even though data is not categorized as media, I couldn’t help to draw a subtle connection between this statement and the discussions of data in <em>Critical Questions for Big Data</em> and "Data Humanism, The Revolution will be Visualized", as these two essays both address on how data and the visualization of data bring changes to the way people receive, analyze, and perceive information.

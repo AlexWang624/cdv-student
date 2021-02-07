@@ -1,4 +1,4 @@
-## Coding Exercise 1
+## Coding Exercise 1 
 
 In this exercise I encountered
 - problems: I don't know how to remove the error message "Error. Please enter a positive number." after entering a positive number in the input box.

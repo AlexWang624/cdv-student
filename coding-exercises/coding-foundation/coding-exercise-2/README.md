@@ -1,4 +1,4 @@
-## Coding Exercise 2
+## Coding Exercise 2 
 
 In this exercise, I created a website page of a bar chart that shows the data collected from a Google Form survey (see the survey [here](https://forms.gle/KbM9Z6tR41gWbtAq7)).
 
