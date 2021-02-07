@@ -1,6 +1,6 @@
 ### Reading 1 ###
 ***
-**Material**
+**Material** <br/>
 [<em>Critical Questions for Big Data</em>](https://drive.google.com/file/d/1UHIPYi6UyY1hSlXQwcxkZ5EQdipexVIx/view) by Danah Boyd, Kate Crawford (2012)
 ["Data Humanism, The Revolution will be Visualized"](http://giorgialupi.com/data-humanism-my-manifesto-for-a-new-data-wold/) by Giorgia Lupi (2017)
 
