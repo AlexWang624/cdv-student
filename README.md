@@ -8,4 +8,4 @@ Among other things, I will link to Coding Exercises and Projects:
 
 - [coding exercise](https://github.com/AlexWang624/cdv-student/tree/main/coding-exercises/coding-foundation)
 - [projects](https://github.com/AlexWang624/cdv-student/tree/main/projects/placeholder)
-- [readings](https://github.com/AlexWang624/cdv-student/tree/main/readings/reading-1)
+- [readings](https://github.com/AlexWang624/cdv-student/tree/main/readings)
