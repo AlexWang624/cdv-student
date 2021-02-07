@@ -1,3 +1,3 @@
-###Reading Response 1###
+### Reading Response 1 ###
 ***
 A year ago I read about the famous statement by communication theorist Marshall McLuhan, “the medium is the message”, in his book Understanding Media: The Extensions of Man. Originally, this statement refers to how the media, such as TV, determines people in how to perceive and process the messages carried by them. However,  even though data is not categorized as media, I couldn’t help to draw a subtle connection between this statement and the discussions of data in Critical Questions for Big Data and Data Humanism, The Revolution will be Visualized, as these two essays both addresses on how data and the visualization of data bring changes to the way people receive, analyze, and perceive information.
