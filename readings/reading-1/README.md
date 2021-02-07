@@ -1,9 +1,11 @@
 ## Reading 1 ##
-###**Material**### <br/>
+### **Material** ###
+<br/>
 1. [<em>Critical Questions for Big Data</em>](https://drive.google.com/file/d/1UHIPYi6UyY1hSlXQwcxkZ5EQdipexVIx/view) by Danah Boyd, Kate Crawford (2012)<br/>
 2. ["Data Humanism, The Revolution will be Visualized"](http://giorgialupi.com/data-humanism-my-manifesto-for-a-new-data-wold/) by Giorgia Lupi (2017)<br/>
 
-###**Response**###<br/>
+### **Response** ###
+<br/>
 A year ago I read about the famous statement by communication theorist Marshall McLuhan, “the medium is the message”, in his book Understanding Media: The Extensions of Man. Originally, this statement refers to how the media, such as TV, determine people in how to perceive and process the messages carried by them. However,  even though data is not categorized as media, I couldn’t help to draw a subtle connection between this statement and the discussions of data in <em>Critical Questions for Big Data</em> and "Data Humanism, The Revolution will be Visualized", as these two essays both address on how data and the visualization of data bring changes to the way people receive, analyze, and perceive information.
 
 Authors for these two essays both mention the context of data and claim it as a very important aspect for understanding data. I think context refers to the background information of data: what the data is about, why the audience should care about the information conveyed by the data, and any other information that is hidden behind the numerical value of these data. We have to clarify under what circumstances these data are generated and collected, the types of these data, and the meanings that we assign to these data. To present unstructured data to the audience who are unfamiliar with the context will cause confusion and misinterpretation.
