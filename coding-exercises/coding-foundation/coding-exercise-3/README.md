@@ -5,4 +5,4 @@ In this exercise, I created a simple visualization of the data I collected so fa
 - Things Learned:
 1. I learned how to create data visualization using D3.js.
 
-See my work [here](https://alexwang624.github.io/cdv-student/coding-exercises/coding-foundation/coding-exercise-2/).
+See my work [here](https://alexwang624.github.io/cdv-student/coding-exercises/coding-foundation/coding-exercise-3/).
