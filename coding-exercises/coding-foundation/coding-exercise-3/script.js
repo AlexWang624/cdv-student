@@ -4,7 +4,7 @@ let viz = d3.select("#viz-container")
 .append("svg") //append something to this selection
    .attr("id", "viz") //id: name of this attribute, viz: value of this attribute
    .attr("width", 600)
-   .attr("height", 400)
+   .attr("height", 500)
 ;
 
 
