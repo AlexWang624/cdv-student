@@ -18,7 +18,7 @@ function gotData(incomingData){
 
 viz.selectAll("circle").data(incomingData).enter()
   .append("circle")
-  .attr("cx", bookWhereX)
+  .attr("cx", a)
   .attr("cy", 200)
   .attr("r", 70)
   .attr("fill", chooseColorWhere)
@@ -28,7 +28,7 @@ viz.selectAll("circle").data(incomingData).enter()
 
 viz.selectAll("circle2").data(incomingData).enter()
     .append("circle")
-    .attr("cx", bookWhereX)
+    .attr("cx", a)
     .attr("cy", 200)
     .attr("r",40)
     .attr("fill", chooseColorGender)
@@ -38,7 +38,7 @@ viz.selectAll("circle2").data(incomingData).enter()
 
 viz.selectAll("rect").data(incomingData).enter()
   .append("rect")
-  .attr("x", bookWhereXX)
+  .attr("x", b)
   .attr("y", 185)
   .attr("width", 15)
   .attr("height", 30)
@@ -86,18 +86,14 @@ function chooseColorPurpose(datapoint){
   }
 }
 
-function bookWhereX(datapoint, i){
-    console.log(datapoint);
-    console.log(i);
+function a(datapoint, i){
+    console.log("first value:", datapoint);
+    console.log("second value:", i);
     return 100 + i * 200;
 }
 
-function bookWhereXX(datapoint, i){
+function b(datapoint, i){
     console.log(datapoint);
     console.log(i);
     return 100 + i * 200 - 7;
-}
-
-function digitalOr(datapoint, i) {
-  return 100 + i * 200;
 }
