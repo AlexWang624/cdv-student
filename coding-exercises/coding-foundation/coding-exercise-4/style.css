@@ -1,16 +1,10 @@
 body{
   width, height: 100%;
   margin: 0;
-  background-color: black;
+  background-color: #330642;
   text-align: center;
 }
 
-h1{
-  color: white;
-  text-align: center;
-  font-family: Monospace;
-  font-size: 50px;
-}
 #viz{
-  background-color: black;
+  background-color: #330642;
 }

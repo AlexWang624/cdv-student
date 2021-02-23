@@ -3,97 +3,100 @@ console.log("js loaded. hello!");
 let viz = d3.select("#viz-container")
 .append("svg") //append something to this selection
    .attr("id", "viz") //id: name of this attribute, viz: value of this attribute
-   .attr("width", 600)
-   .attr("height", 500)
+   .attr("width", 2000)
+   .attr("height", 2000)
 ;
 
 
 d3.json("data.json").then(gotData);
 
+
+function randomGroupPosition(){
+  let x = Math.random() * 800;
+  let y = Math.random() * 800;
+  return "translate (" + x + ", " + y +")"
+}
+
 function gotData(incomingData){
-  console.log(incomingData);
-    let bookWhere = incomingData[0].where;
-    console.log(bookWhere);
+  console.log("the incoming data is", incomingData);
 
+let datagroups = viz.selectAll(".datagroup").data(incomingData).enter()
+.append("g")
+  .attr("class", "datagroup")
+  ;
 
-viz.selectAll("circle").data(incomingData).enter()
-  .append("circle")
-  .attr("cx", a)
-  .attr("cy", 200)
-  .attr("r", 70)
+  datagroups.append("rect")
+  .attr("x", b)
+  .attr("y", 125)
+  .attr("width", 150)
+  .attr("height", 150)
   .attr("fill", chooseColorWhere)
   .attr("stroke", chooseColorLanguage)
   .attr("stroke-width",15)
   ;
 
-viz.selectAll("circle2").data(incomingData).enter()
-    .append("circle")
-    .attr("cx", a)
-    .attr("cy", 200)
-    .attr("r",40)
-    .attr("fill", chooseColorGender)
-    .attr("stroke", chooseColorDigital)
-    .attr("stroke-width",15)
-    ;
+  datagroups.append("circle")
+  .attr("cx", a)
+  .attr("cy", 200)
+  .attr("r", 40)
+  .attr("fill", chooseColorGender)
+  .attr("stroke", chooseColorPurpose)
+  .attr("stroke-width",20)
+  ;
 
-viz.selectAll("rect").data(incomingData).enter()
-  .append("rect")
-  .attr("x", b)
-  .attr("y", 185)
-  .attr("width", 15)
-  .attr("height", 30)
-  .attr("fill", chooseColorPurpose)
+  // datagroups.attr("transform", randomGroupPosition);
 }
-;
+
+
 
 function chooseColorWhere(datapoint){
-  if (datapoint.where == "book"){
-    return "red"
-  }else if (datapoint.where == "essay"){
+  if (datapoint.where == "Book"){
     return "orange"
+  }else if (datapoint.where == "Essay"){
+    return "blue"
   }
 }
-
+//
 function chooseColorLanguage(datapoint){
-  if (datapoint.language == "chinese"){
-    return "blue"
-  }else if (datapoint.language == "english"){
-    return "pink"
+  if (datapoint.language == "Chinese"){
+    return "red"
+  }else if (datapoint.language == "English"){
+    return "green"
   }
 }
 
 function chooseColorDigital(datapoint){
-  if (datapoint.digitalOrPaper == "paper"){
+  if (datapoint.digitalorpaper == "paper"){
     return "white"
-  }else if (datapoint.digitalOrPaper == "digital"){
+  }else if (datapoint.digitalorpaper == "digital"){
     return "black"
   }
 }
-
+//
 function chooseColorGender(datapoint){
-  if (datapoint.gender == "male"){
-    return "green"
-  }else if (datapoint.gender == "female"){
+  if (datapoint.gender == "Male"){
+    return "pink"
+  }else if (datapoint.gender == "Female"){
     return "purple"
   }
 }
-
+//
 function chooseColorPurpose(datapoint){
-  if (datapoint.purpose == "recreation"){
+  if (datapoint.purpose == "Recreation"){
     return "white"
-  }else if (datapoint.purpose == "academics"){
-    return "black"
+  }else if (datapoint.purpose == "Academics"){
+    return "red"
   }
 }
-
+//
 function a(datapoint, i){
     console.log("first value:", datapoint);
     console.log("second value:", i);
-    return 100 + i * 200;
+    return 100 + i * 300;
 }
 
 function b(datapoint, i){
     console.log(datapoint);
     console.log(i);
-    return 100 + i * 200 - 7;
+    return  25 + i * 300;
 }
