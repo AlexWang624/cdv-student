@@ -1,0 +1,32 @@
+[{
+        "where": "book",
+        "language": "chinese",
+        "digitalOrPaper": "paper",
+        "genre": "fiction",
+        "gender": "male",
+        "nationality": "chinese",
+        "purpose": "recreation",
+        "myFeeling": "sadness"
+    },
+    {
+            "where": "essay",
+            "language": "english",
+            "digitalOrPaper": "digital",
+            "genre": "argumentative essay",
+            "gender": "female",
+            "nationality": "multiple authors",
+            "purpose": "academics",
+            "myFeeling": "surprise"
+        },
+        {
+                "where": "essay",
+                "language": "chinese",
+                "digitalOrPaper": "paper",
+                "genre": "fiction",
+                "gender": "male",
+                "nationality": "chinese",
+                "purpose": "recreation",
+                "myFeeling": "sadness"
+            }
+
+  ]
