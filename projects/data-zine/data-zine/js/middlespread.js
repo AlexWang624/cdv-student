@@ -19,7 +19,7 @@ let viz = d3.select("#container")
   .attr("class", "viz") //id: name of this attribute, viz: value of this attribute
   .attr("width", w)
   .attr("height", h)
-  .style("background-color", "#070729");
+  .style("background-color", "#130d2b");
 
 
 const circlePath = (angle, radius) => { // Calculate the angle at which the element will be placed.
@@ -43,7 +43,7 @@ function gotData(incomingData) {
 
   // -------------------
   //Circular path
-  //White
+  //white
   viz.append("circle")
     .attr("cx", w / 2)
     .attr("cy", h / 2)
@@ -529,7 +529,7 @@ function gotData(incomingData) {
     } else if (datapoint.nationality == "French") {
       return "#f8c44c" //yellow
     } else if (datapoint.nationality == "Multiple Authors") {
-      return "white" //black
+      return "white" //white
     } else if (datapoint.nationality == "Canadian") {
       return "purple" //purple
     }

@@ -7,7 +7,7 @@ let viz = d3.select("#container")
   .attr("width", w)
   .attr("height", h)
   .attr("class", "viz")
-  .style("background-color", "#070729");
+  .style("background-color", "#130d2b");
 
 viz.append("path")
   .attr("id", "wavy") //Unique id of the path
@@ -19,16 +19,17 @@ viz.append("path")
   .attr("d", "M 400,400 A 200,200 0 0,0 800,400") //SVG path
   .style("fill", "none")
   .style("stroke", "white")
-  .attr("stroke-width", "22");
+  .attr("stroke-width", "30");
 
 //Create an SVG text element and append a textPath element
 viz.append("text")
   .append("textPath") //append a textPath to the text element
   .attr("xlink:href", "#wavy") //place the ID of the path here
-  .attr("startOffset", "5%")
+  .attr("startOffset", "1%")
   .text("Unforgettable Things that I Have Read")
   .attr("fill", "white")
-  .attr("font-size", "30px")
+  .attr("font-size", "33px")
+  .attr("font-weight", "bold")
   .attr("font-family", "Arvo");
 
 viz.append("circle")
@@ -37,7 +38,7 @@ viz.append("circle")
   .attr("r", 700)
   .attr("fill", "none")
   .attr("stroke", "#f8c44c")
-  .attr("stroke-width", "22");
+  .attr("stroke-width", "30");
 
 viz.append("circle")
   .attr("cx", w / 2)
@@ -45,7 +46,7 @@ viz.append("circle")
   .attr("r", 600)
   .attr("fill", "none")
   .attr("stroke", "#418645")
-  .attr("stroke-width", "22");
+  .attr("stroke-width", "30");
 
 viz.append("circle")
   .attr("cx", w / 2)
@@ -53,7 +54,7 @@ viz.append("circle")
   .attr("r", 500)
   .attr("fill", "none")
   .attr("stroke", "#ff9ece")
-  .attr("stroke-width", "22");
+  .attr("stroke-width", "30");
 
 viz.append("circle")
   .attr("cx", w / 2)
@@ -61,7 +62,7 @@ viz.append("circle")
   .attr("r", 400)
   .attr("fill", "none")
   .attr("stroke", "#303986")
-  .attr("stroke-width", "22");
+  .attr("stroke-width", "30");
 
 viz.append("circle")
   .attr("cx", w / 2)
@@ -69,7 +70,7 @@ viz.append("circle")
   .attr("r", 300)
   .attr("fill", "none")
   .attr("stroke", "#f23c1f")
-  .attr("stroke-width", "22");
+  .attr("stroke-width", "30");
 
 // viz.append("circle")
 //   .attr("cx", 600)

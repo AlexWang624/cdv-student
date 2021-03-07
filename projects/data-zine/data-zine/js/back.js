@@ -10,7 +10,7 @@ let viz = d3.select("#container")
   .attr("class", "viz") //id: name of this attribute, viz: value of this attribute
   .attr("width", w)
   .attr("height", h)
-  .style("background-color", "#070729");
+  .style("background-color", "#130d2b");
 
 viz.append("path")
   .attr("id", "wavy") //Unique id of the path
