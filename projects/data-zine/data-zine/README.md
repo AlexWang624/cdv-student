@@ -3,7 +3,9 @@
 In this project, I collected data on unforgettable sentences that I have read. By saying unforgettable, I mean that I would think about these sentences after I read them, or I would mention them in the conversations I had with my friends.
 </br>
 I created a Google sheet to collect the data. Here is a screenshot of my Google sheet:
+
 ![alt text](https://github.com/AlexWang624/cdv-student/blob/main/projects/data-zine/data-zine/screenshots/Google%20Sheet.png)
+
 I would put the data of the sentences into this Google sheet once they fit in my definition of being "unforgettable".
 <br/>
 I collected the data of where I read these sentences, their topics, the languages of them, and why I found these sentences unforgettable. I also collected the information of the authors, including their genders and nationalities. There are some data that I collected in the Google sheet but were not used in the final outcome of my Data Zine Project, because I think they are not that useful. These data include the title of the books and essays and the purpose of reading them.
