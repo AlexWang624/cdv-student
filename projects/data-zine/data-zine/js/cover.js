@@ -26,7 +26,7 @@ viz.append("text")
   .append("textPath") //append a textPath to the text element
   .attr("xlink:href", "#wavy") //place the ID of the path here
   .attr("startOffset", "1%")
-  .text("Unforgettable Things that I Have Read")
+  .text("Unforgettable Sentences that I Have Read")
   .attr("fill", "white")
   .attr("font-size", "33px")
   .attr("font-weight", "bold")
