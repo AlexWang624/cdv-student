@@ -381,7 +381,7 @@ document.getElementById("buttonE").addEventListener("click", shuffleData);
 
 
 function randomBlue() {
-  let r = 0;
+  let r = Math.random() * 255;
   let g = Math.random() * 255;
   let b = Math.random() * 255;
   return "rgb(" + r + "," + g + "," + b + ")";
@@ -417,7 +417,7 @@ function randomButton() {
   });
   elementsForPage.select("rect")
     .transition()
-    .delay(1000)
+    .delay(100)
     .duration(2000)
     .attr("fill", randomBlue)
     .attr("width", function() {
