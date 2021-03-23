@@ -7,7 +7,7 @@ console.log(typeof data !== 'undefined' ? "seems like it ;-) it comes from the d
 
 // global variables that we need at various spots:
 let w = 800;
-let h = 500;
+let h = 600;
 let padding = 50;
 
 // put the svg onto the page:
@@ -35,7 +35,7 @@ xAxis.tickFormat(d => {
 let xAxisGroup = viz.append("g").classed("xAxis", true);
 xAxisGroup.call(xAxis);
 xAxisGroup.selectAll("text").attr("font-size", 24).attr("y", 9);
-xAxisGroup.selectAll("line").remove();
+// xAxisGroup.selectAll("line").remove();
 xAxisGroup.attr("transform", "translate(0," + (h - padding) + ")")
 
 
@@ -183,7 +183,7 @@ function add() {
   elementsForPage.select("rect")
     .transition()
     .delay(100)
-    .duration(1000)
+    .duration(500)
     .attr("fill", "black")
     .attr("width", function() {
       return xScale.bandwidth();
@@ -210,9 +210,9 @@ function add() {
     .attr("width", function() {
       return xScale.bandwidth();
     })
-    .attr("fill", "#F27294")
+    .attr("fill", "blue")
     .transition()
-    .delay(600)
+    .delay(400)
     .duration(500)
     .attr("y", function(d, i) {
       return -yScale(d.value);
@@ -253,25 +253,31 @@ function remove() {
   enteringElements = elementsForPage.enter();
   exitingElements = elementsForPage.exit();
 
-  elementsForPage.transition().duration(1000).attr("transform", function(d, i) {
+  elementsForPage.transition().duration(500).attr("transform", function(d, i) {
     return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
   });
 
-exitingElements.remove();
+  exitingElements.remove();
 
 }
 document.getElementById("buttonB").addEventListener("click", remove);
 
-function randomNumber(){
+
+
+function randomNumber() {
   return Math.random() * 10
 
 }
+
+
 function removeAndAdd() {
   removeAndAddDatapoints(randomNumber, randomNumber);
   add(randomNumber);
   remove(randomNumber);
 }
 document.getElementById("buttonC").addEventListener("click", removeAndAdd);
+
+
 
 function sortData() {
   sortDatapoints();
@@ -287,9 +293,6 @@ function sortData() {
     return data.filter(dd => dd.key == d)[0].name;
   }); // we adjust this because it uses the new data
   xAxisGroup.transition().call(xAxis).selectAll("text").attr("font-size", 18);
-
-  //updating the y axis
-
   yMax = d3.max(data, function(d) {
     return d.value
   });
@@ -298,21 +301,14 @@ function sortData() {
 
   elementsForPage = graphGroup.selectAll(".datapoint").data(data);
   console.log(elementsForPage);
-  // don't use let bc variables already declared earlier
-  enteringElements = elementsForPage.enter();
-  exitingElements = elementsForPage.exit();
-
   elementsForPage.transition().duration(800).attr("transform", function(d, i) {
     return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
   });
 
-  // only updating things that are impacted by the new data
-  // 'updating' = write the code again so that it can run again with the updated dataset
-
   elementsForPage.select("rect")
     .transition()
     .delay(100)
-    .duration(1000)
+    .duration(500)
     .attr("fill", "black")
     .attr("width", function() {
       return xScale.bandwidth();
@@ -324,38 +320,18 @@ function sortData() {
       return yScale(d.value);
     })
 
-  let incomingDataGroups = enteringElements.append("g")
-    .classed("datapoint", true);
-  incomingDataGroups.attr("transform", function(d, i) {
-    return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
-  });
-  incomingDataGroups.append("rect")
-    .attr("y", function(d, i) {
-      return 0;
-    })
-    .attr("height", function(d, i) {
-      return 0;
-    })
-    .attr("width", function() {
-      return xScale.bandwidth();
-    })
-    .attr("fill", "#F27294")
-    .transition()
-    .delay(600)
-    .duration(500)
-    .attr("y", function(d, i) {
-      return -yScale(d.value);
-    })
-    .attr("height", function(d, i) {
-      return yScale(d.value);
-    })
-    .attr("fill", "black");
-
 }
 document.getElementById("buttonD").addEventListener("click", sortData);
 
+
+
+
+
+
+
 function shuffleData() {
   shuffleDatapoints();
+
   //updates the list of keys
   allNames = data.map(function(d) {
     return d.key;
@@ -379,21 +355,13 @@ function shuffleData() {
 
   elementsForPage = graphGroup.selectAll(".datapoint").data(data);
   console.log(elementsForPage);
-  // don't use let bc variables already declared earlier
-  enteringElements = elementsForPage.enter();
-  exitingElements = elementsForPage.exit();
-
   elementsForPage.transition().duration(800).attr("transform", function(d, i) {
     return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
   });
-
-  // only updating things that are impacted by the new data
-  // 'updating' = write the code again so that it can run again with the updated dataset
-
   elementsForPage.select("rect")
     .transition()
     .delay(100)
-    .duration(1000)
+    .duration(500)
     .attr("fill", "black")
     .attr("width", function() {
       return xScale.bandwidth();
@@ -404,32 +372,63 @@ function shuffleData() {
     .attr("height", function(d, i) {
       return yScale(d.value);
     })
+}
 
-  let incomingDataGroups = enteringElements.append("g")
-    .classed("datapoint", true);
-  incomingDataGroups.attr("transform", function(d, i) {
+document.getElementById("buttonE").addEventListener("click", shuffleData);
+
+
+
+
+
+function randomBlue() {
+  let r = 0;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  return "rgb(" + r + "," + g + "," + b + ")";
+}
+
+function randomButton() {
+
+  //updates the list of keys
+  allNames = data.map(function(d) {
+    return d.key;
+  });
+
+  xScale.domain(allNames);
+  //updating the x axis
+  xAxis = d3.axisBottom(xScale);
+  xAxis.tickFormat(d => {
+    return data.filter(dd => dd.key == d)[0].name;
+  }); // we adjust this because it uses the new data
+  xAxisGroup.transition().call(xAxis).selectAll("text").attr("font-size", 18);
+
+  //updating the y axis
+
+  yMax = d3.max(data, function(d) {
+    return d.value
+  });
+  yDomain = [0, yMax + yMax * 0.1];
+  yScale.domain(yDomain);
+
+  elementsForPage = graphGroup.selectAll(".datapoint").data(data);
+  console.log(elementsForPage);
+  elementsForPage.transition().duration(800).attr("transform", function(d, i) {
     return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
   });
-  incomingDataGroups.append("rect")
-    .attr("y", function(d, i) {
-      return 0;
-    })
-    .attr("height", function(d, i) {
-      return 0;
-    })
+  elementsForPage.select("rect")
+    .transition()
+    .delay(1000)
+    .duration(2000)
+    .attr("fill", randomBlue)
     .attr("width", function() {
       return xScale.bandwidth();
     })
-    .attr("fill", "#F27294")
-    .transition()
-    .delay(600)
-    .duration(500)
     .attr("y", function(d, i) {
-      return -yScale(d.value);
-    })
-    .attr("height", function(d, i) {
       return yScale(d.value);
     })
-    .attr("fill", "black");
+    .attr("height", function(d, i) {
+      return -yScale(d.value);
+    })
 }
-document.getElementById("buttonE").addEventListener("click", sortData);
+
+document.getElementById("buttonF").addEventListener("click", randomButton);
