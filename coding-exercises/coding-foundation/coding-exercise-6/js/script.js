@@ -257,12 +257,10 @@ function remove() {
     return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
   });
 
-  exitingElements.remove();
-
 
   elementsForPage.select("rect")
     .transition()
-    .delay(100)
+    .delay(800)
     .duration(500)
     .attr("fill", "black")
     .attr("width", function() {
@@ -274,6 +272,25 @@ function remove() {
     .attr("height", function(d, i) {
       return yScale(d.value);
     })
+
+exitingElements.select("rect")
+  .transition()
+  .delay(200)
+  .duration(500)
+  .attr("fill", "yellow")
+  .attr("width", function() {
+    return xScale.bandwidth();
+  })
+  .attr("y", function(d, i) {
+    return yScale(d.value);
+  })
+  .attr("height", function(d, i) {
+    return -yScale(d.value);
+  })
+
+
+    // exitingElements.remove();
+
 
 }
 document.getElementById("buttonB").addEventListener("click", remove);
@@ -290,6 +307,43 @@ function removeAndAdd() {
   removeAndAddDatapoints(randomNumber, randomNumber);
   add(randomNumber);
   remove(randomNumber);
+
+  enteringElements = elementsForPage.enter();
+  exitingElements = elementsForPage.exit();
+
+  elementsForPage.transition().duration(800).attr("transform", function(d, i) {
+    return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
+  });
+
+  let incomingDataGroups = enteringElements.append("g")
+    .classed("datapoint", true);
+  incomingDataGroups.attr("transform", function(d, i) {
+    return "translate(" + xScale(d.key) + "," + (h - padding) + ")"
+  });
+  incomingDataGroups.append("rect")
+    .attr("y", function(d, i) {
+      return 0;
+    })
+    .attr("height", function(d, i) {
+      return 0;
+    })
+    .attr("width", function() {
+      return xScale.bandwidth();
+    })
+    .attr("fill", "blue")
+    .transition()
+    .delay(400)
+    .duration(500)
+    .attr("y", function(d, i) {
+      return -yScale(d.value);
+    })
+    .attr("height", function(d, i) {
+      return yScale(d.value);
+    })
+    .attr("fill", "black");
+
+
+
 }
 document.getElementById("buttonC").addEventListener("click", removeAndAdd);
 
