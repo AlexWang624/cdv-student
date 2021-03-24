@@ -259,6 +259,22 @@ function remove() {
 
   exitingElements.remove();
 
+
+  elementsForPage.select("rect")
+    .transition()
+    .delay(100)
+    .duration(500)
+    .attr("fill", "black")
+    .attr("width", function() {
+      return xScale.bandwidth();
+    })
+    .attr("y", function(d, i) {
+      return -yScale(d.value);
+    })
+    .attr("height", function(d, i) {
+      return yScale(d.value);
+    })
+
 }
 document.getElementById("buttonB").addEventListener("click", remove);
 
