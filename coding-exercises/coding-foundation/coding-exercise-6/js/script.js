@@ -273,6 +273,8 @@ function remove() {
       return yScale(d.value);
     })
 
+
+
 exitingElements.select("rect")
   .transition()
   .delay(200)
@@ -288,9 +290,7 @@ exitingElements.select("rect")
     return -yScale(d.value);
   })
 
-
     // exitingElements.remove();
-
 
 }
 document.getElementById("buttonB").addEventListener("click", remove);
