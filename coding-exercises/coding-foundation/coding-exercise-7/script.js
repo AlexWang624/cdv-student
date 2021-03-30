@@ -109,6 +109,7 @@ console.log("dataUSA", dataChina)
 
   document.getElementById("usa").addEventListener("click", showUSA);
   document.getElementById("china").addEventListener("click", showChina);
+
 }
 
 // function that turns all datapoints year values

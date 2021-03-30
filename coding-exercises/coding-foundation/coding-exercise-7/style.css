@@ -4,10 +4,34 @@ button{
 }
 #usa{
   background-color: blue;
+  border-radius: 15px;
+  box-shadow: 0 9px #05053d;
+  font-family: monospace;
+  color: white;
 }
 #china{
   background-color: red;
+  border-radius: 15px;
+  box-shadow: 0 9px #5a0303;
+  font-family: monospace;
+  color: white;
 }
+
+#usa:hover {background-color: #0a0a7f}
+
+#usa:active {
+  background-color: #760804;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#china:hover {background-color: #960a05}
+
+#china:active {
+  background-color: #960a05;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
 button{
   color:white;
   font-weight: bold;
