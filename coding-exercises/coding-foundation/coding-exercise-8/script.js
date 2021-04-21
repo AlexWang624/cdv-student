@@ -88,7 +88,7 @@ d3.json("mainland.geojson").then(function(geoData) {
   ], geoData);
 
     let projections = [projection1, projection2, projection3, projection4];
-    let projectionname = [geoEquirectangular, geoStereographic, geoAzimuthalEqualArea, geoConicConformal]
+    let projectionname = ["geoEquirectangular", "geoStereographic", "geoAzimuthalEqualArea", "geoConicConformal"];
     let pathMaker = d3.geoPath(projections[i]);
 
 
@@ -137,7 +137,7 @@ d3.json("mainland.geojson").then(function(geoData) {
       viz.selectAll(".province")
         .data(geoData.features)
         .attr("d", pathMaker)
-        document.querySelector("#nameprojection").innerHTML = name[i];
+        document.querySelector("#nameprojection").innerHTML = projectionname[i];
     });
   });
 
