@@ -1,5 +1,5 @@
-let w = 2000;
-let h = 1000;
+let w = 1200;
+let h = 900;
 let padding = 90;
 let i = 0;
 
