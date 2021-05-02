@@ -1,0 +1,31 @@
+body {
+  width, height: 100%;
+  background-color: black;
+  padding-left:50px;
+}
+.container{
+  padding-top:20px;
+
+}
+#title {
+  color: #625df6;
+  font-family: "Abril Fatface", cursive;
+  font-size: 200px;
+  margin-left:400px;
+
+}
+
+#subtitle {
+  color: #625df6;
+  font-family: "Abril Fatface", cursive;
+  font-size: 90px;
+    margin-left:400px;
+}
+
+#about {
+  display: inline;
+  overflow-wrap: break-word;
+  color: white;
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+}
