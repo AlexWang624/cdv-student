@@ -1,9 +1,81 @@
 body {
   width, height: 100%;
   background-color: black;
-  padding-left:50px;
+  padding-left: 50px;
 }
 
-.container{
-  padding-top:20px;
+.container {
+  padding-top: 20px;
+}
+
+#chronology{
+  height: 600px;
+  width: 2000px;
+  overflow: scroll;
+  /* border-style: solid;
+  border-color: #625df6;
+  border-width: thin; */
+}
+
+.stickyDiv1 {
+  position: sticky;
+  /* ps you can even make this div a flexbox to position elements inside it */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* .timelinedata circle:hover{
+  fill: #625df6;
+  r: 20px;
+  cursor:pointer;
+}
+
+.timelinedata text:hover{
+  fill: #625df6;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.datagroup rect:hover{
+  fill: #625df6;
+  cursor:pointer;
+} */
+
+.stickyDiv2 {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  position: sticky;
+  /* ps you can even make this div a flexbox to position elements inside it */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.scrollingContent div {
+  width: 40%;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: white;
+  opacity: 60%;
+  margin-bottom: 1000px;
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.scrollingContent2 div {
+  width: 50%;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: white;
+  opacity: 60%;
+  margin-bottom: 1000px;
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.scrollingContent2 div:last-child {
+  margin-bottom: 0px;
 }
