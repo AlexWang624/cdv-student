@@ -30,18 +30,18 @@ viz.append("text")
   .attr("y", h / 2 + 70);
 
 viz.append("text")
-  .text("A web-based data visualization project on the orbital")
+  .text("A web-based data visualization project on the developments")
   .attr("fill", "white")
-  .attr("font-size", "40px")
+  .attr("font-size", "35px")
   .attr("font-family", "'Roboto Mono', monospace")
   .attr("x", 0)
   .attr("y", h / 2 + 200)
   .attr("overflow-wrap", "break-word");
 
 viz.append("text")
-  .text("launches in space from 1957.")
+  .text("the developments of the Space Age")
   .attr("fill", "white")
-  .attr("font-size", "40px")
+  .attr("font-size", "35px")
   .attr("font-family", "'Roboto Mono', monospace")
   .attr("x", 0)
   .attr("y", h / 2 + 260)
@@ -107,7 +107,7 @@ d3.json("Data/Chronology.json").then(function(timelineData) {
 
   function gettextpositionText(d, i) {
     if (i % 2 === 0) {
-      return w / 2 + 410  ;
+      return w / 2 + 410;
     } else {
       return w / 2;
     }
@@ -197,7 +197,7 @@ d3.json("Data/Chronology.json").then(function(timelineData) {
 
 
   datagroups.append("circle")
-    .attr("cx", w / 2 +200)
+    .attr("cx", w / 2 + 200)
     .attr("cy", getVertical)
     .attr("r", 10)
     .style("fill", "white");
@@ -225,7 +225,8 @@ d3.json("Data/Chronology.json").then(function(timelineData) {
         .transition()
         .duration(800)
         .attr("r", 10)
-        .style("fill", "white");
+        .style("fill", "white")
+        .style("cursor", "pointer");
       d3.select(this).select(".datetext")
         .transition()
         .duration(800)
@@ -234,34 +235,34 @@ d3.json("Data/Chronology.json").then(function(timelineData) {
         .transition()
         .duration(800)
         .style("fill", "none")
-      // d3.select(this).select(".Detail")
-      //   .transition()
-      //   .duration(800)
-      //   .style("fill", "none")
     });
 
-  // function nameMission(d, i) {
-  //   return "Name of the Mission: " + d.Name
-  //
-  // function mission(d, i) {
-  //   return "Mission Details: " + d.Mission
-  // }
-  //
-  // datagroups.append("text")
-  //   .text(nameMission)
-  //   .style("font-family", "monospace")
-  //   .attr("x", 20)
-  //   .attr("y", getVertical)
-  //   .style("fill", "black");
-  //
-  // datagroups.append("text")
-  //   .text(mission)
-  //   .style("font-family", "monospace")
-  //   .attr("x", 20)
-  //   .attr("y", getVertical)
-  //   .style("fill", "black");
+  datagroups.append("text")
+    .attr("class", "introduction")
+    .style("fill", "white")
+    .style("font-family", "'Roboto Mono', monospace")
+    .attr("x", 20)
+    .attr("y", 20)
+    .text("The Space Age is a period including activities related to the Space Race between the United States and the Soviet Union during the Cold War, space exploration, space technology, and the cultural developments influenced by these events.")
+    .call(wrap, 350);
 
+  datagroups.append("text")
+    .attr("class", "introduction2")
+    .style("fill", "white")
+    .style("font-family", "'Roboto Mono', monospace")
+    .attr("x", 20)
+    .attr("y", 250)
+    .text("The Space Age began in the year of 1957, with the launch of the first artificial satellite in the world, Sputnik 1.")
+    .call(wrap, 350);
 
+  datagroups.append("text")
+    .attr("class", "introduction3")
+    .style("fill", "orange")
+    .style("font-family", "'Roboto Mono', monospace")
+    .attr("x", 20)
+    .attr("y", 400)
+    .text("Here is an interactive timeline of the significant technological events in space before and during the Space Age. Hover on the dots to find out what happened on this day and scroll to see the whole timeline!")
+    .call(wrap, 350);
 });
 
 
@@ -281,6 +282,7 @@ let viz3 = d3.select("#launchsite")
 
 
 //Barchart
+d3.json("Data/Orbital_Launches.json").then(function(incomingData){
 let viz4 = d3.select("#barchart")
   .append("svg")
   .attr("class", "viz4")
@@ -288,7 +290,6 @@ let viz4 = d3.select("#barchart")
   .attr("height", h)
   .style("background-color", "black");
 
-function gotData(incomingData) {
   console.log(incomingData);
 
   let maxPop = d3.max(incomingData, function(d, i) {
@@ -322,7 +323,15 @@ function gotData(incomingData) {
     return colorScale(d.Launches.length);
   }
 
-  let launchyears = datagroups2
+  function getName(d, i) {
+    return d.name;
+  }
+
+  function getNumbers(d, i) {
+    return d.Launches.length;
+  }
+
+  datagroups2
     .append("rect")
     .attr("class", "launchyear")
     .attr("x", 0)
@@ -332,17 +341,10 @@ function gotData(incomingData) {
     .attr("height", getheight)
   // .on("mouseover", handleMouseOver);
 
-  function getName(d, i) {
-    return d.name
-  }
 
-  function getNumbers(d, i) {
-    return d.Launches.length
-  }
-
-  let lables = datagroups2
+datagroups2
     .append("text")
-    .attr("class", "name")
+    .attr("class", "year")
     .text(getName)
     .attr("x", 160)
     .attr("y", -5)
@@ -351,14 +353,14 @@ function gotData(incomingData) {
     .style("font-size", "20px")
     .style("fill", "white");
 
-  let numbers = datagroups2
+datagroups2
     .append("text")
     .attr("class", "number")
     .text(getNumbers)
     .attr("x", 0)
-    .attr("y", -500)
+    .attr("y", -440)
     .style("font-family", "'Roboto Mono', monospace")
-    .style("font-size", "10px")
+    .style("font-size", "30px")
     .style("fill", "white");
 
   function getGroupPosition(d, i) {
@@ -370,14 +372,25 @@ function gotData(incomingData) {
 
   datagroups2.attr("transform", getGroupPosition);
 
-  datagroups2
-    .on("mouseover", function(d, i) {
-      d3.select(this).select("rect")
-        .transition()
-        .attr("width", 18)
-        .attr("fill", "orange")
-    });
 
+  datagroups2.on("mouseover", function(d, i) {
+      d3.select(this).select(".launchyear")
+        .transition()
+        .style("fill", "orange");
+      d3.select(this).select(".name")
+        .transition()
+        .style("fill", "orange");
+    })
+    .on("mouseout", function(d, i) {
+      d3.select(this).select(".launchyear")
+        .transition()
+        .duration(800)
+        .style("fill", getColor);
+      d3.select(this).select(".name")
+        .transition()
+        .duration(800)
+        .style("fill", "white");
+    });
 
   // var y_axis = d3.axisRight()
   //   .scale(yScale)
@@ -385,9 +398,7 @@ function gotData(incomingData) {
   //   .render()
   //   .attr('transform', 'translate(0, 0)');
   // datagroups2.call(y_axis);
-}
-
-d3.json("Data/Orbital_Launches.json").then(gotData);
+});
 
 
 

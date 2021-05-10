@@ -8,7 +8,7 @@ body {
   padding-top: 20px;
 }
 
-#chronology{
+.chronology{
   height: 600px;
   width: 2000px;
   overflow: scroll;
@@ -17,32 +17,9 @@ body {
   border-width: thin; */
 }
 
-.stickyDiv1 {
-  position: sticky;
-  /* ps you can even make this div a flexbox to position elements inside it */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
 
-/* .timelinedata circle:hover{
-  fill: #625df6;
-  r: 20px;
-  cursor:pointer;
-}
 
-.timelinedata text:hover{
-  fill: #625df6;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.datagroup rect:hover{
-  fill: #625df6;
-  cursor:pointer;
-} */
-
-.stickyDiv2 {
+.stickyDiv {
   height: 100vh;
   width: 100%;
   top: 0;
@@ -54,28 +31,19 @@ body {
   align-items: center; */
 }
 
-.scrollingContent div {
-  width: 40%;
-  margin-left: 20px;
-  padding: 10px;
-  background-color: white;
-  opacity: 60%;
-  margin-bottom: 1000px;
-  font-size: 40px;
-  font-family: monospace;
-}
 
-.scrollingContent2 div {
+.scrollingContent div {
   width: 50%;
   margin-left: 20px;
   padding: 10px;
-  background-color: white;
-  opacity: 60%;
+  /* background-color: white;
+  opacity: 60%; */
   margin-bottom: 1000px;
   font-size: 40px;
-  font-family: monospace;
+  color:white;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.scrollingContent2 div:last-child {
+.scrollingContent div:last-child {
   margin-bottom: 0px;
 }
