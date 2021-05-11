@@ -85,7 +85,7 @@ let viz2 = d3.select("#chronology")
   .attr("height", 10400)
   .style("background-color", "black");
 
-d3.json("data/Chronology.json").then(function(timelineData) {
+d3.json("Data/Chronology.json").then(function(timelineData) {
   console.log(timelineData);
   let datagroups = viz2.selectAll(".timelinedata").data(timelineData).enter()
     .append("g")
@@ -455,8 +455,8 @@ let viz3 = d3.select("#launchsite")
   .attr("height", h)
   .style("background-color", "black");
 
-d3.json("data/countries.geojson").then(function(geoData) {
-  d3.json("data/Launch_Site.json").then(function(siteData) {
+d3.json("Data/countries.geojson").then(function(geoData) {
+  d3.json("Data/Launch_Site.json").then(function(siteData) {
     let nestFunction = d3.nest().key(function(d) {
       return d.Country;
     });
@@ -511,7 +511,7 @@ let viz4 = d3.select("#launchsitecountries")
   .attr("height", 800)
   .style("background-color", "black");
 
-d3.json("data/Launch_Site.json").then(function(sitecountryData) {
+d3.json("Data/Launch_Site.json").then(function(sitecountryData) {
 
   // A scale that gives a X target position for each group
   var x = d3.scaleOrdinal()
@@ -687,7 +687,7 @@ d3.json("data/Launch_Site.json").then(function(sitecountryData) {
 });
 
 //Barchart
-d3.json("data/Orbital_Launches.json").then(function(incomingData) {
+d3.json("Data/Orbital_Launches.json").then(function(incomingData) {
   let viz5 = d3.select("#barchart")
     .append("svg")
     .attr("class", "viz5")
@@ -825,7 +825,7 @@ let viz6 = d3.select("#orbitingsatellite")
 // initialise scales
 let xOrbitScale = d3.scaleTime().range([90, 1210]);
 
-d3.csv("data/Orbiting_Satellites.csv").then(function(satellitesData) {
+d3.csv("Data/Orbiting_Satellites.csv").then(function(satellitesData) {
   console.log(satellitesData);
 
 
