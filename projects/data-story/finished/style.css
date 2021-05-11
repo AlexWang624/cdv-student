@@ -8,15 +8,24 @@ body {
   padding-top: 20px;
 }
 
-.chronology{
-  height: 600px;
-  width: 2000px;
+#chronology{
+  height: 700px;
+  width: 1300px;
   overflow: scroll;
   /* border-style: solid;
   border-color: #625df6;
   border-width: thin; */
 }
 
+#numberofyear {
+  width: 25%;
+  margin-left: 20px;
+  padding: 10px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}
 
 
 .stickyDiv {
@@ -31,19 +40,46 @@ body {
   align-items: center; */
 }
 
+#purple {
+  font-size: 50px;
+  color: #625df6;
+}
+
+#purple2 {
+  color: #625df6;
+}
+
+#orange {
+  font-size: 50px;
+  color: orange;
+}
+
+#orange2 {
+  color: orange;
+}
 
 .scrollingContent div {
-  width: 50%;
+  width: 25%;
   margin-left: 20px;
   padding: 10px;
   /* background-color: white;
   opacity: 60%; */
-  margin-bottom: 1000px;
-  font-size: 40px;
-  color:white;
+  margin-bottom: 500px;
+  font-size: 25px;
+  color: white;
   font-family: 'Roboto Mono', monospace;
 }
 
 .scrollingContent div:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 500px;
 }
+.ending{
+  width: 25%;
+  height: 1300px;
+}
+ #thanks{
+   font-size: 50px;
+   color: white;
+   text-align: center;
+   font-family: 'Roboto Mono', monospace;
+ }

@@ -12,7 +12,10 @@
 
   <!-- include the d3 library -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/enter-view"></script>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,38 +23,55 @@
   <div id="container">
   </div>
 
-    <div id="chronology">
-    </div>
+  <div id="introduction">
+  </div>
 
+  <div id="chronology">
+  </div>
+
+  <div class="stickyDiv">
+    <div id="piechart">
+    </div>
+  </div>
+
+  <div class="scrollingContent">
+    <div class="trigger1">
+      <p class="">Spaceflights that are launched into outer space can be categorized into <span id="purple2"> orbital spaceflights </span> and <span id="orange2"> suborbital spaceflights.</span></p>
+    </div>
+    <div class="trigger2">
+      <p class="">Since 1957, there are more than <span id="purple"> 6,018 </span> <span id="purple2">aunch attempts for orbital spaceflights</span>, which means the spaceflight is placed on a trajectory where it could remain in space for at least
+        one orbit.</p>
+    </div>
+    <div class="trigger3">
+      <p class="">And <span id="orange"> 29,455 </span> <span id="orange2">launches attemps for suborbital spaceflights</span>, which means that the spaceflight will not complete one orbital revolution.</p>
+    </div>
+    <div class="trigger4">
+      <p class="">The following story will focus on <span id="purple2"> orbital spaceflights.</span></p>
+    </div>
+  </div>
 
   <div id="launchsite">
+    <p id="numberofyear">There are <span id="purple"> 21 </span> countries and regions with launch sites for orbital spaceflights. They are hightlighted in <span id="purple2"> purple </span> in the map below.</p>
+  </div>
+
+  <div id="launchsitecountries">
   </div>
 
   <!-- <section> -->
-    <!-- <div class="stickyDiv"> -->
-      <div id="barchart">
-        <p id = "numberlaunches">There were (innerHTML) orbital launches in this year.</p>
-      </div>
-    <!-- </div> -->
-
-    <!-- <div class="scrollingContent">
-      <div>
-        <p class="">Number of orbital launches per year since 1957</p>
-      </div>
-      <div>
-        <p class=""></p>
-      </div>
-    </div> -->
-  <!-- </section> -->
+  <!-- <div class="stickyDiv"> -->
+  <div id="barchart">
+    <p id="numberofyear">And the number of orbital launches per year from 1957 to 2020. </br></br> Hover on the bar to see the number.</p>
+  </div>
 
 
-  <div id="satellite">
+  <div id="orbitingsatellite">
+  </div>
+
+  <div id="ending">
+    <p id="thanks">Thanks for Reading :)</p>
   </div>
   <!-- our main script: -->
-  <script type="text/javascript" src="script.js"></script>
-    <script src="https://unpkg.com/enter-view"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 </body>
 
+<script type="text/javascript" src="script.js"></script>
 </html>
