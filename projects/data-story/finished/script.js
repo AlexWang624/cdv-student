@@ -52,7 +52,7 @@ let vizintro = d3.select("#introduction")
   .append("svg")
   .attr("class", "vizintro")
   .attr("width", w)
-  .attr("height", 800)
+  .attr("height", 700)
   .style("background-color", "black");
 
 
@@ -60,21 +60,21 @@ vizintro.append("text")
   .attr("class", "introduction")
   .style("fill", "white")
   .style("font-family", "'Roboto Mono', monospace")
-  .attr("x", 20)
+  .attr("x", 400)
   .attr("y", 20)
   .style("font-size", 25)
   .text("The Space Age is a period including activities related to the Space Race between the United States and the Soviet Union during the Cold War, space exploration, space technology, and the cultural developments influenced by these events.")
-  .call(wrap, 350);
+  .call(wrap, 500);
 
 vizintro.append("text")
   .attr("class", "introduction2")
   .style("fill", "white")
   .style("font-family", "'Roboto Mono', monospace")
-  .attr("x", 20)
-  .attr("y", 400)
+  .attr("x", 400)
+  .attr("y", 300)
   .style("font-size", 25)
   .text("The Space Age began in the year of 1957, with the launch of the first artificial satellite in the world, Sputnik 1.")
-  .call(wrap, 350);
+  .call(wrap, 500);
 
 
 //Chronology
@@ -692,7 +692,7 @@ d3.json("Data/Orbital_Launches.json").then(function(incomingData) {
     .append("svg")
     .attr("class", "viz5")
     .attr("width", w)
-    .attr("height", h)
+    .attr("height", 900)
     .style("background-color", "black");
 
   console.log(incomingData);
@@ -823,7 +823,7 @@ let viz6 = d3.select("#orbitingsatellite")
   .attr("height", 800);
 
 // initialise scales
-let xOrbitScale = d3.scaleTime().range([90, 1210]);
+let xOrbitScale = d3.scaleTime().range([15, 1285]);
 
 d3.csv("Data/Orbiting_Satellites.csv").then(function(satellitesData) {
   console.log(satellitesData);
@@ -850,10 +850,12 @@ d3.csv("Data/Orbiting_Satellites.csv").then(function(satellitesData) {
   let xAxis = d3.axisBottom(xOrbitScale);
   // build the axis into our group
   xAxisGroup.call(xAxis);
-  xAxisGroup.attr("stroke", "white");
+  xAxisGroup.style("fill", "white");
+  xAxisGroup.attr("y", 40);
+  xAxisGroup.selectAll("text").attr("font-size", 17).style("fill", "white");;
 
   // put a circle for each data point onto the page
-  viz6.selectAll(".datapointorbiting").data(satellitesData).enter()
+  let orbit = viz6.selectAll(".datapointorbiting").data(satellitesData).enter()
     .append("circle")
     .attr("class", "datapointorbiting")
     .attr("cx", function(d) {
@@ -865,7 +867,19 @@ d3.csv("Data/Orbiting_Satellites.csv").then(function(satellitesData) {
     .attr("r", function(d) {
       return 3
     })
-    .style("fill", "white");;
+    .style("fill", chooseColorForOrbit)
+
+    function chooseColorForOrbit(d){
+      if (d.ClassofOrbit == "GEO"){
+          return "orange"
+        }else if (d.ClassofOrbit == "MEO"){
+          return "lightblue"
+        }else if (d.ClassofOrbit == "Elliptical"){
+          return "red"
+        }else{
+          return "#625df6"
+        }
+    }
 
   satellitesData = satellitesData.map(function(datapointorbiting) {
     datapointorbiting.x = xOrbitScale(datapointorbiting.date);
@@ -896,7 +910,76 @@ d3.csv("Data/Orbiting_Satellites.csv").then(function(satellitesData) {
       })
   }
 
-  // problem: points overlap!
+//This is not working!
+orbit.on("mouseover", function(d, i) {
+      d3.select(".datapointorbiting")
+        .transition()
+        .style("fill", "green");
+    })
+    .on("mouseout", function(d, i) {
+      d3.select(".datapointorbiting")
+        .transition()
+        .duration(800)
+        .style("fill", chooseColorForOrbit);
+    });
+
+
+
+  viz6.append("circle")
+  .style("fill", "#625df6")
+  .attr("cx", 40)
+  .attr("cy", 650)
+  .attr("r", 10)
+
+  viz6.append("text")
+  .text("Satellites in Low Earth Orbit")
+  .attr("x", 60)
+  .attr("y", 660)
+  .style("fill", "white")
+  .style("font-size", 20)
+  .style("font-family", "'Roboto Mono', monospace")
+
+  viz6.append("circle")
+  .style("fill", "orange")
+  .attr("cx", 500)
+  .attr("cy", 650)
+  .attr("r", 10)
+
+  viz6.append("text")
+  .text("Satellites in  Geostationary Orbit")
+  .attr("x", 520)
+  .attr("y", 660)
+  .style("fill", "white")
+  .style("font-size", 20)
+  .style("font-family", "'Roboto Mono', monospace")
+
+  viz6.append("circle")
+  .style("fill", "lightblue")
+  .attr("cx", 40)
+  .attr("cy", 690)
+  .attr("r", 10)
+
+  viz6.append("text")
+  .text("Satellites in Medium Earth Orbit")
+  .attr("x", 60)
+  .attr("y", 700)
+  .style("fill", "white")
+  .style("font-size", 20)
+  .style("font-family", "'Roboto Mono', monospace")
+
+  viz6.append("circle")
+  .style("fill", "red")
+  .attr("cx", 500)
+  .attr("cy", 690)
+  .attr("r", 10)
+
+  viz6.append("text")
+  .text("Satellites in Elliptical Orbit")
+  .attr("x", 520)
+  .attr("y", 700)
+  .style("fill", "white")
+  .style("font-size", 20)
+  .style("font-family", "'Roboto Mono', monospace")
 
   })
 
