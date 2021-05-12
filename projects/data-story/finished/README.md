@@ -15,6 +15,7 @@
   - GeoJSON Data for Countries in the World
 
 ### Methodology:
+[UCS Satellite Database](https://www.ucsusa.org/resources/satellite-database) can be downloaded in Excel format and converted to a cvs file. I used a free web scraper called [ParseHub](https://www.parsehub.com/) for scraping the data on [Chronology of Space Launches](https://space.skyrocket.de/directories/chronology.htm) and [Launch Sites](https://space.skyrocket.de/directories/launchsites.htm). For the data in [Chronology of Significant Events in Space](https://en.wikipedia.org/wiki/Space_Age#:~:text=The%20Space%20Age%20is%20a,continuing%20to%20the%20present%20day.), I directly copied and pasted them in a Google Sheets and then exported them in a json file.
 
 
 
