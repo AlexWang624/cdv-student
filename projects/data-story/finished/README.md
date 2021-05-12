@@ -1,5 +1,4 @@
-## The Project
- - Project Name: Space Odyssey - A Glimpse into the Space Age
+## Space Odyssey - A Glimpse into the Space Age
  - [Live Version](https://alexwang624.github.io/cdv-student/projects/data-story/finished/)
 ![GIF](GIF_1.gif)
 ![GIF2](GIF_2. gif)
