@@ -563,7 +563,7 @@ d3.json("Data/Launch_Site.json").then(function(sitecountryData) {
     .style('opacity', 0)
     .text(tooltipsText)
     .attr('x', 20)
-    .attr('y', 450)
+    .attr('y', 550)
     .style("font-family", "'Roboto Mono', monospace")
     .call(wrap, 350);
   // })
@@ -671,7 +671,7 @@ d3.json("Data/Launch_Site.json").then(function(sitecountryData) {
     .attr("x", 20)
     .attr("y", 200)
     .style("font-size", 25)
-    .text("There are three types of orbital launch sites.")
+    .text("42 laucn sites were built in these 21 countries and regions, and there are three types of orbital launch sites.")
     .call(wrap, 350);
 
   datapoint4.append("text")
@@ -679,7 +679,7 @@ d3.json("Data/Launch_Site.json").then(function(sitecountryData) {
     .style("fill", "white")
     .style("font-family", "'Roboto Mono', monospace")
     .attr("x", 20)
-    .attr("y", 320)
+    .attr("y", 420)
     .style("font-size", 25)
     .text("Hover on the dots to see the details of the launch site below.")
     .call(wrap, 350);
