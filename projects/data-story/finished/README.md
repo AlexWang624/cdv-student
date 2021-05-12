@@ -1,8 +1,6 @@
 ## Space Odyssey - A Glimpse into the Space Age
  - [Live Version](https://alexwang624.github.io/cdv-student/projects/data-story/finished/)
-![GIF1](GIF_1.gif)
-
-![GIF2](GIF_2.gif)
+![GIF](GIF_2.gif)
 
  - 2-3 sentences about the project
   - written in a style that will make people want to visit it
