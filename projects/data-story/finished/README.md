@@ -5,7 +5,7 @@
 ![GIF](GIF_2.gif)
 
 ### About This Project:
- Wanna know what is happening in space? Take a look at Space Odyssey - A Glimpse into the Space Age! This is a web-based data visualization project on the technological developments during the Space Age. With data from 5 datasets, this project presents a chronology of significant events in space during the Space Age and includes several visualizations on the information of orbital spaceflights.
+ Wanna know what is happening in space? Take a look at Space Odyssey - A Glimpse into the Space Age! This is a web-based data visualization project on the technological developments during the Space Age. With data from 5 datasets, this project presents a interactive timeline of significant events in space during the Space Age and includes several visualizations on the information of orbital spaceflights.
 
 ### Datasets Used in This Project:
   - [UCS Satellite Database](https://www.ucsusa.org/resources/satellite-database)
@@ -22,7 +22,18 @@
 
 ## The Process
 
-- Why did you choose to visualize the data in this way?
-- What can be seen in the visualization? Does it reveal something you didn't expect?
+### Why did you choose to visualize the data in this way?
+
+### What can be seen in the visualization? Does it reveal something you didn't expect?
+This project consists of
+- a scrollable interactive timeline of significant technological events in space;
+- a visualization of the numbers of orbital and suborbital spaceflights (as a transition to tell the audience that the following project will focus on orbital spaceflights only);
+- a map of countries and regions that have launch sites for orbital spaceflights;
+- a force graph on the detailed information on these launch sites;
+- a bar chart of the number of orbital launches per year from 1957 to 2020;
+- and another force graph on the currently operational satellites around the Earth.
+
+I wanted to tell the story of the Space Age in detail and make my project more like a
+
 - Did you make crucial compromises? Which ones?
 - If you had more time, what would you change, improve, add to the project?
