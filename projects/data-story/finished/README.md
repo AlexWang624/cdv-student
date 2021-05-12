@@ -1,8 +1,8 @@
 ## The Project
  - Project Name: Space Odyssey - A Glimpse into the Space Age
  - [A link to the live version of the project](https://alexwang624.github.io/cdv-student/projects/data-story/finished/)
- - ![ Alt text](GIF_1. gif)
- - ![ Alt text](GIF_2. gif)
+ - ![](GIF_1. gif)
+ - ![](GIF_2. gif)
   - don't try to include every aspect of your project in one GIF, just **a small aspect that you think looks good** and will make people want to visit it (something that moves, e.g. a transition)
  - 2-3 sentences about the project
   - written in a style that will make people want to visit it
